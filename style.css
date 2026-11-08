@@ -1,0 +1,127 @@
+/* ---------- Basic setup ---------- */
+* {
+  box-sizing: border-box;   /* keeps width: 100% from overflowing when padding is added */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;   /* page background - change me! */
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #2c3e50;              /* heading colour - change me! */
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 800px;            /* never wider than 800px */
+  margin: 0 auto;              /* centres it on the page */
+  padding: 20px;               /* small padding on phones */
+}
+
+@media (min-width: 600px) {
+  .container {
+    padding: 40px;             /* bigger padding on larger screens */
+  }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;         /* space between sections */
+}
+
+/* ---------- Form ---------- */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Focus state: what you see when you click into a field */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.25);
+}
+
+/* ---------- Submit button ---------- */
+button {
+  background-color: #2196F3;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1976D2;   /* darker blue on hover */
+}
+
+button:focus {
+  outline: 3px solid rgba(33, 150, 243, 0.4);
+  outline-offset: 2px;
+}
+
+/* ---------- Table ---------- */
+.table-wrapper {
+  overflow-x: auto;            /* horizontal scroll on small screens */
+}
+
+table {
+  width: 100%;
+  min-width: 450px;            /* forces scrolling when the screen is narrow */
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #2196F3;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;   /* striped rows */
+}
+
+tbody tr:hover {
+  background-color: #e3f2fd;   /* row highlight on hover */
+}
